@@ -53,7 +53,7 @@ function handleDrawer(){
               <VIcon class="me-2" icon="tabler-user" size="22" />
             </template>
 
-            <VListItemTitle @click="handleDrawer">
+            <VListItemTitle @click="handleDrawer" tag="button">
               Profile
             </VListItemTitle>
           </VListItem>
