@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import type { SearchHeader, SearchItem } from '@/@fake-db/types'
-import axios from '@axios'
-import { useThemeConfig } from '@core/composable/useThemeConfig'
+import type { SearchHeader, SearchItem } from '@/@fake-db/types';
+import axios from '@axios';
+import { useThemeConfig } from '@core/composable/useThemeConfig';
 
 interface Suggestion {
   icon: string
@@ -105,6 +105,10 @@ const redirectToSuggestedOrSearchedPage = (selected: Suggestion) => {
 }
 
 const LazyAppBarSearch = defineAsyncComponent(() => import('@core/components/AppBarSearch.vue'))
+
+function defineOptions(arg0: { inheritAttrs: boolean; }) {
+throw new Error('Function not implemented.');
+}
 </script>
 
 <template>

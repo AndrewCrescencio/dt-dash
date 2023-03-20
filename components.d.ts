@@ -288,7 +288,10 @@ declare module '@vue/runtime-core' {
     TimelineBasic: typeof import('./src/views/demos/components/timeline/TimelineBasic.vue')['default']
     TimelineCard: typeof import('./src/views/demos/components/timeline/TimelineCard.vue')['default']
     TimelineWithIcons: typeof import('./src/views/demos/components/timeline/TimelineWithIcons.vue')['default']
+    UserInfo: typeof import('./src/@core/components/UserInfo.vue')['default']
     UserInfoEditDialog: typeof import('./src/@core/components/UserInfoEditDialog.vue')['default']
+    UserInfoTags: typeof import('./src/@core/components/UserInfoTags.vue')['default']
+    UserTags: typeof import('./src/@core/components/userTags.vue')['default']
     UserUpgradePlanDialog: typeof import('./src/@core/components/UserUpgradePlanDialog.vue')['default']
   }
 }

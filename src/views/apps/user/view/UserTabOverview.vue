@@ -1,74 +1,74 @@
 <script lang="ts" setup>
-import UserInvoiceTable from './UserInvoiceTable.vue'
 
 // Images
-import avatar2 from '@images/avatars/avatar-2.png'
-import figma from '@images/icons/project-icons/figma.png'
-import html5 from '@images/icons/project-icons/html5.png'
-import python from '@images/icons/project-icons/python.png'
-import react from '@images/icons/project-icons/react.png'
-import sketch from '@images/icons/project-icons/sketch.png'
-import vue from '@images/icons/project-icons/vue.png'
-import xamarin from '@images/icons/project-icons/xamarin.png'
+// import figma from '@images/icons/project-icons/figma.png'
+// import html5 from '@images/icons/project-icons/html5.png'
+// import python from '@images/icons/project-icons/python.png'
+// import react from '@images/icons/project-icons/react.png'
+// import sketch from '@images/icons/project-icons/sketch.png'
+// import vue from '@images/icons/project-icons/vue.png'
+// import xamarin from '@images/icons/project-icons/xamarin.png'
+import avatar2 from '@images/avatars/avatar-2.png';
+import UserInvoiceTable from './UserInvoiceTable.vue';
 
-const projects = [
-  {
-    logo: react,
-    name: 'BGC eCommerce App',
-    project: 'React Project',
-    totalTask: '122/240',
-    progress: 78,
-    hours: '18:42',
-  },
-  {
-    logo: figma,
-    name: 'Falcon Logo Design',
-    project: 'Figma Project',
-    totalTask: '09/56',
-    progress: 18,
-    hours: '20:42',
-  },
-  {
-    logo: vue,
-    name: 'Dashboard Design',
-    project: 'Vuejs Project',
-    totalTask: '290/320',
-    progress: 62,
-    hours: '120:87',
-  },
-  {
-    logo: xamarin,
-    name: 'Foodista mobile app',
-    project: 'Xamarin Project',
-    totalTask: '290/320',
-    progress: 8,
-    hours: '120:87',
-  },
-  {
-    logo: python,
-    name: 'Dojo Email App',
-    project: 'Python Project',
-    totalTask: '120/186',
-    progress: 49,
-    hours: '230:10',
-  },
-  {
-    logo: sketch,
-    name: 'Blockchain Website',
-    project: 'Sketch Project',
-    totalTask: '99/109',
-    progress: 92,
-    hours: '342:41',
-  },
-  {
-    logo: html5,
-    name: 'Hoffman Website',
-    project: 'HTML Project',
-    totalTask: '98/110',
-    progress: 88,
-    hours: '12:45',
-  },
-]
+// const projects = [
+//   {
+//     logo: react,
+//     name: 'BGC eCommerce App',
+//     project: 'React Project',
+//     totalTask: '122/240',
+//     progress: 78,
+//     hours: '18:42',
+//   },
+//   {
+//     logo: figma,
+//     name: 'Falcon Logo Design',
+//     project: 'Figma Project',
+//     totalTask: '09/56',
+//     progress: 18,
+//     hours: '20:42',
+//   },
+//   {
+//     logo: vue,
+//     name: 'Dashboard Design',
+//     project: 'Vuejs Project',
+//     totalTask: '290/320',
+//     progress: 62,
+//     hours: '120:87',
+//   },
+//   {
+//     logo: xamarin,
+//     name: 'Foodista mobile app',
+//     project: 'Xamarin Project',
+//     totalTask: '290/320',
+//     progress: 8,
+//     hours: '120:87',
+//   },
+//   {
+//     logo: python,
+//     name: 'Dojo Email App',
+//     project: 'Python Project',
+//     totalTask: '120/186',
+//     progress: 49,
+//     hours: '230:10',
+//   },
+//   {
+//     logo: sketch,
+//     name: 'Blockchain Website',
+//     project: 'Sketch Project',
+//     totalTask: '99/109',
+//     progress: 92,
+//     hours: '342:41',
+//   },
+//   {
+//     logo: html5,
+//     name: 'Hoffman Website',
+//     project: 'HTML Project',
+//     totalTask: '98/110',
+//     progress: 88,
+//     hours: '12:45',
+//   },
+// ]
 
 const resolveUserProgressVariant = (progress: number) => {
   if (progress <= 25)
@@ -107,44 +107,46 @@ const resolveUserProgressVariant = (progress: number) => {
             </tr>
           </thead>
           <tbody>
-            <tr
+            <!--
+              <tr
               v-for="project in projects"
               :key="project.name"
               style="height: 3.75rem;"
-            >
+              >
               <td>
-                <div class="d-flex align-center">
-                  <VAvatar
-                    :size="38"
-                    class="me-3"
-                    :image="project.logo"
-                  />
-                  <div>
-                    <p class="text-base mb-0">
-                      {{ project.name }}
-                    </p>
-                    <p class="text-sm text-disabled mb-0">
-                      {{ project.project }}
-                    </p>
-                  </div>
-                </div>
+              <div class="d-flex align-center">
+              <VAvatar
+              :size="38"
+              class="me-3"
+              :image="project.logo"
+              />
+              <div>
+              <p class="text-base mb-0">
+              {{ project.name }}
+              </p>
+              <p class="text-sm text-disabled mb-0">
+              {{ project.project }}
+              </p>
+              </div>
+              </div>
               </td>
               <td>
-                {{ project.totalTask }}
+              {{ project.totalTask }}
               </td>
               <td>
-                <span>{{ project.progress }}%</span>
-                <VProgressLinear
-                  :height="8"
-                  :model-value="project.progress"
-                  rounded
-                  :color="resolveUserProgressVariant(project.progress)"
-                />
+              <span>{{ project.progress }}%</span>
+              <VProgressLinear
+              :height="8"
+              :model-value="project.progress"
+              rounded
+              :color="resolveUserProgressVariant(project.progress)"
+              />
               </td>
               <td class="text-medium-emphasis">
-                {{ project.hours }}
+              {{ project.hours }}
               </td>
-            </tr>
+              </tr>
+            -->
           </tbody>
         </VTable>
       </VCard>

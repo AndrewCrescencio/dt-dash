@@ -1,17 +1,22 @@
 <script lang="ts" setup>
 import navItems from '@/navigation/vertical'
 import { useThemeConfig } from '@core/composable/useThemeConfig'
-
 // Components
 import Footer from '@/layouts/components/Footer.vue'
 import NavbarThemeSwitcher from '@/layouts/components/NavbarThemeSwitcher.vue'
+import UserInfo from '@/layouts/components/UserInfo.vue'
 import UserProfile from '@/layouts/components/UserProfile.vue'
-
 // @layouts plugin
 import { VerticalNavLayout } from '@layouts'
 
 const { appRouteTransition, isLessThanOverlayNavBreakpoint } = useThemeConfig()
 const { width: windowWidth } = useWindowSize()
+
+const drawer = ref(false);
+
+function handleDrawer(payload: boolean) {
+  drawer.value = payload
+}
 </script>
 
 <template>
@@ -40,7 +45,8 @@ const { width: windowWidth } = useWindowSize()
 
         <VSpacer />
 
-        <UserProfile />
+        <UserProfile @drawerChanged="handleDrawer"/>
+        
       </div>
     </template>
 
@@ -60,6 +66,7 @@ const { width: windowWidth } = useWindowSize()
     </template>
 
     <!-- 👉 Customizer -->
-    <!-- <TheCustomizer /> -->
+    <!-- 👉 new Component -->
+    <UserInfo :drawerIsOpen="drawer" @drawerChanged="handleDrawer"/>
   </VerticalNavLayout>
 </template>

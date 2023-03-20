@@ -56,7 +56,7 @@ const database: Database = {
       avatar: avatar2,
       status: 'busy',
     },
-    
+
   ],
   chats: [
     {

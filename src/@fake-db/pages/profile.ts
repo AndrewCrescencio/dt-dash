@@ -1,4 +1,13 @@
 // ** Mock Adapter
+import eventLabel from '@images/icons/project-icons/event.png'
+import figmaLabel from '@images/icons/project-icons/figma.png'
+import htmlLabel from '@images/icons/project-icons/html5.png'
+import reactLabel from '@images/icons/project-icons/react.png'
+import socialLabel from '@images/icons/project-icons/social.png'
+import supportLabel from '@images/icons/project-icons/support.png'
+import twitterLabel from '@images/icons/project-icons/twitter.png'
+import vueLabel from '@images/icons/project-icons/vue.png'
+import xdLabel from '@images/icons/project-icons/xd.png'
 import mock from '@/@fake-db/mock'
 
 // ** Types
@@ -17,15 +26,6 @@ import avatar5 from '@images/avatars/avatar-5.png'
 import avatar6 from '@images/avatars/avatar-6.png'
 import avatar7 from '@images/avatars/avatar-7.png'
 import avatar8 from '@images/avatars/avatar-8.png'
-import eventLabel from '@images/icons/project-icons/event.png'
-import figmaLabel from '@images/icons/project-icons/figma.png'
-import htmlLabel from '@images/icons/project-icons/html5.png'
-import reactLabel from '@images/icons/project-icons/react.png'
-import socialLabel from '@images/icons/project-icons/social.png'
-import supportLabel from '@images/icons/project-icons/support.png'
-import twitterLabel from '@images/icons/project-icons/twitter.png'
-import vueLabel from '@images/icons/project-icons/vue.png'
-import xdLabel from '@images/icons/project-icons/xd.png'
 import UserProfileHeaderBg from '@images/pages/user-profile-header-bg.png'
 
 interface DataType {
